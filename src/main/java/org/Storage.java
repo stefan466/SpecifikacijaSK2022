@@ -1,10 +1,6 @@
 package org;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.List;
-import java.util.Properties;
 
 public abstract class Storage {
 
@@ -65,7 +61,12 @@ public abstract class Storage {
         }
     }
 
+    //NOVA - IMPL U TEST
+    public abstract boolean uploadFile(String path);
 
+    //NOVA - IMPL U TEST
+    // STRING PERIOD U FORMATU "dd.mm.yyyy.-dd.mm.yyyy." PA DA SE PARSIRA
+    public abstract void listFilesCreatedPeriod(String path, String period);
 
     public abstract void listAll(String path);
 
