@@ -86,11 +86,7 @@ public abstract class Storage {
 
     public abstract String returnDir(String path);
 
-    public abstract List sortByName(String path, String marker, String order);
-
-    public abstract List sortByDate(String path, String marker, String order);
-
-    public abstract List sortByModification(String path, String marker, String order);
+    public abstract List sort(String path, String marker, String order);
 
     public String getPath() {
         return path;
