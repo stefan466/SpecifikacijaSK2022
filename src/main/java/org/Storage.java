@@ -68,19 +68,19 @@ public abstract class Storage {
     // STRING PERIOD U FORMATU "dd.mm.yyyy.-dd.mm.yyyy." PA DA SE PARSIRA
     public abstract void listFilesCreatedPeriod(String path, String period);
 
-    public abstract void listAll(String path);
+    public abstract List listAll(String path);
 
-    public abstract void listFiles(String path);
+    public abstract List listFiles(String path);
 
-    public abstract void listDirs(String path);
+    public abstract List listDirs(String path);
 
-    public abstract void listByName(String path, String name);
+    public abstract List listByName(String path, String name);
 
     public abstract void renameFile(String path, String newName);
 
-    public abstract void listFilesWithExt(String path, String extension);
+    public abstract List listFilesWithExt(String path, String extension);
 
-    public abstract void listSubstringFiles(String path, String substring);
+    public abstract List listSubstringFiles(String path, String substring);
 
     public abstract boolean containsFile(String path, List<String> files);
 
