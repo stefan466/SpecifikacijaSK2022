@@ -70,19 +70,38 @@ public abstract class Storage {
      */
     public abstract void copyFile(String sourcePath, String destinationPath);
 
+    public void copyFiles(List<String> paths, String destinationPath){
+
+        for(String path : paths){
+
+            copyFile(path, destinationPath);
+        }
+    }
     /**
      * Downloads a file from GoogleDrive to the local memory.
      * For local implementation downloads the file to the location outside the root directory.
      * @param sourcePath
      */
     public abstract void downloadFile(String sourcePath);
+    public void downloadFiles(List<String> paths){
 
+        for(String path : paths){
+
+            downloadFile(path);
+        }
+    }
     /**
      * Deletes a file from the directory.
      * @param sourcePath path/ID of a file to be deleted
      */
     public abstract void deleteFile(String sourcePath);
+    public void deleteFiles(List<String> paths){
 
+        for(String path : paths){
+
+            deleteFile(path);
+        }
+    }
     //NOVA - IMPL U TEST
     public abstract boolean uploadFile(String path);
 
