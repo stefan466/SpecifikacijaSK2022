@@ -70,6 +70,11 @@ public abstract class Storage {
      */
     public abstract void copyFile(String sourcePath, String destinationPath);
 
+    /**
+     * Uses the copyFile method to copy multiple files.
+     * @param paths
+     * @param destinationPath
+     */
     public void copyFiles(List<String> paths, String destinationPath){
 
         for(String path : paths){
@@ -102,6 +107,12 @@ public abstract class Storage {
             deleteFile(path);
         }
     }
+
+    /**
+     * Uploads file to the Storage.
+     * @param path
+     * @return returns true if the upload was successfull.
+     */
     //NOVA - IMPL U TEST
     public abstract boolean uploadFile(String path);
 
@@ -215,10 +226,18 @@ public abstract class Storage {
      */
     public abstract List sortByModification(String path, String marker, String order);
 
+    /**
+     * Path getter.
+     * @return path
+     */
     public String getPath() {
         return path;
     }
 
+    /**
+     * Path setter
+     * @param path
+     */
     public void setPath(String path) {
         this.path = path;
     }
